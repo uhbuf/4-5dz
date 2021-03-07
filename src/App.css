@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+.mainScreen {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+.navigator {
+  background-color: seagreen;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dashboard {
+  background-color: wheat;
+  flex: 3;
+}
+.button {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  border: 1px solid white;
+  padding: 0 1rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.buttonExit {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.students {
+  margin-top: 5%;
+}

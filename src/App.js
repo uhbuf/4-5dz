@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import FirstScreen from './4 задание/1screen';
+import SecondScreen from './4 задание/2screen';
+import 'antd/dist/antd.css';
+import React from 'react';
+class App extends React.Component {
+  state = {
+    switch: false,
+  };
+  changeState = (value) => {
+    this.setState({ switch: value });
+  };
+  render() {
+    return (
+      <div>
+        {this.state.switch ? (
+          <SecondScreen smena={this.changeState} />
+        ) : (
+          <FirstScreen smena={this.changeState} />
+        )}
+      </div>
+    );
+  }
 }
 
 export default App;
